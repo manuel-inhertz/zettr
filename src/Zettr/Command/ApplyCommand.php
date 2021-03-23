@@ -66,6 +66,7 @@ class ApplyCommand extends Command
                 $processor->check();
                 $processor->apply();
                 $processor->printResults();
+                return 0;
             } catch (\Exception $e) {
                 $processor->printResults();
                 $output->writeln('<error>ERROR: Stopping execution because an error has occured!</error>');
